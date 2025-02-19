@@ -34,11 +34,17 @@ public class Engine implements EngineRequirements {
     }
 
     public void refuel() {
-
+        this.currentFuelLevel = maxFuelLevel;
     }
 
-    public Boolean go() {
-        return true;
+    public Boolean go(double fuel) {
+        this.currentFuelLevel -= fuel;
+        System.out.println(currentFuelLevel);
+        if (this.currentFuelLevel == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 

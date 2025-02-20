@@ -7,9 +7,18 @@ public class Car {
     private ArrayList <Passenger>  passengersOnboard;
     private int maxCapacity;
 
-    public Car(int max){
-        this.maxCapacity = max;
+
+    /**
+     * 
+     * @param maxCapacity
+     */
+
+    public Car(int maxCapacity){
+        this.maxCapacity = maxCapacity;
         this.passengersOnboard = new ArrayList<>();
     }
+
+    public 
+
 
 }

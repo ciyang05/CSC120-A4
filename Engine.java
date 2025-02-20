@@ -21,24 +21,53 @@ public class Engine implements EngineRequirements {
 
     }
 
+    /**
+     * getter for fuel type
+     * @return the fuel type
+     */
+
     public FuelType getFuelType() {
         return this.f;
     }
+
+
+    /**
+     * getter for maxFuel level 
+     * @return the maxFuel level
+     */
 
     public double getMaxFuel() {
         return this.maxFuelLevel;
     }
 
+
+    /**
+     * getter for currentFuel level
+     * @return the currentFuel level 
+     */
+
     public double getCurrentFuel() {
         return this.currentFuelLevel;
     }
+
+    /**
+     * resets Engine's current fuel level to maximum
+     */
+
 
     public void refuel() {
         this.currentFuelLevel = maxFuelLevel;
     }
 
-    public Boolean go(double fuel) {
-        this.currentFuelLevel -= fuel;
+    /**
+     * 
+     * @param amt
+     * @return true or false depending on if fuel level is above 0
+     */
+
+
+    public Boolean go(double amt) {
+        this.currentFuelLevel -= amt;
         System.out.println(currentFuelLevel);
         if (this.currentFuelLevel == 0) {
             return true;
@@ -57,5 +86,6 @@ public class Engine implements EngineRequirements {
         Engine myEngine = new Engine(FuelType.ELECTRIC, 0.0, 100.0);
         System.out.println(myEngine);
     }
+
 
 }

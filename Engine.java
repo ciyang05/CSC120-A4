@@ -66,8 +66,8 @@ public class Engine implements EngineRequirements {
      */
 
 
-    public Boolean go(double amt) {
-        this.currentFuelLevel -= amt;
+    public Boolean go() {
+        this.currentFuelLevel -= 2;
         System.out.println(currentFuelLevel);
         if (this.currentFuelLevel == 0) {
             return true;

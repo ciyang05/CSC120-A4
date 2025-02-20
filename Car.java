@@ -18,7 +18,28 @@ public class Car {
         this.passengersOnboard = new ArrayList<>();
     }
 
-    public 
+    /**
+     * the getter for max capacity
+     * @return maxCapacity
+     */
 
+    public int getCapacity() {
+        return this.maxCapacity;
+    }
+
+    /**
+     * the getter for seatsRemaining method 
+     * @return number of seats remaining 
+     */
+
+    public int seatsRemaining() {
+        return seatsRemaining();
+    }
+
+    public Passenger addPassenger(Passenger p) {
+        
+
+    }
 
 }
+

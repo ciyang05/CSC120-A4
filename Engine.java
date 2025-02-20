@@ -61,7 +61,6 @@ public class Engine implements EngineRequirements {
 
     /**
      * 
-     * @param amt
      * @return true or false depending on if fuel level is above 0
      */
 
@@ -69,7 +68,7 @@ public class Engine implements EngineRequirements {
     public Boolean go() {
         this.currentFuelLevel -= 2;
         System.out.println(currentFuelLevel);
-        if (this.currentFuelLevel == 0) {
+        if (this.currentFuelLevel > 0) {
             return true;
         } else {
             return false;

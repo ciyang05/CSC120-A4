@@ -7,7 +7,7 @@ public class Engine implements EngineRequirements {
 
 
     /**
-     * 
+     * the constructor will initialize the current fuel level, fuel type, and max fuel level objects 
      * @param f
      * @param currentFuelLevel
      * @param maxFuelLevel
@@ -51,7 +51,7 @@ public class Engine implements EngineRequirements {
     }
 
     /**
-     * resets Engine's current fuel level to maximum
+     * resets Engine's current fuel level to maximum level
      */
 
 
@@ -60,7 +60,7 @@ public class Engine implements EngineRequirements {
     }
 
     /**
-     * 
+     * will decrease current fuel level by 2, print out the current fuel level, and checks if it is greater than 0
      * @return true or false depending on if fuel level is above 0
      */
 

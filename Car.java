@@ -44,24 +44,36 @@ public class Car {
     /**
      * checks to see if car is full and passenger is already on board. if not, adds passenger to array list
      * @param p
-     * @return false if maxCapacity is filled and passenger p is on board. otherwise, return true
+     * @return true if passenger is added to car or false if cannot add passenger
      */
 
     public boolean addPassenger(Passenger p) {
         int cap = passengersOnboard.size();
-        if (cap == maxCapacity && passengersOnboard.contains(p)) {
-            return false;
+        if (cap < maxCapacity && !passengersOnboard.contains(p)) {
+            passengersOnboard.add(p);
+            return true;
 
         } else {
-            passengersOnboard.add(p);
-                return true;
+                return false;
         }
         
 
     }
 
-    public Passenger removePassenger(Passenger p) {
-        pass;
+    /**
+     * checks to see if passenger is already on board. if so, passenger will be removed
+     * @param p
+     * @return true if function is able to remove passenger from car or false if not
+     */
+
+    public boolean removePassenger(Passenger p) {
+        if (passengersOnboard.contains(p)) {
+            passengersOnboard.remove(p);
+            return true;
+        
+        } else {
+            return false;
+        }
     }
 
 

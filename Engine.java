@@ -76,15 +76,4 @@ public class Engine implements EngineRequirements {
     }
 
 
-    // toString() tells Java "when I try to print this object, here's how I want you to format it."
-    public String toString() {
-        return("\n Engine has fuel type: " + this.f + "\n Current fuel level is: " + this.currentFuelLevel + "\n Max fuel level: " + this.maxFuelLevel);
-    }
-
-    public static void main(String[] args) {
-        Engine myEngine = new Engine(FuelType.ELECTRIC, 0.0, 100.0);
-        System.out.println(myEngine);
-    }
-
-
 }

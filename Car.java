@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 
-public class Car {
+public class Car implements CarRequirements {
 
     // Attributes 
     private ArrayList <Passenger>  passengersOnboard;
@@ -47,7 +47,7 @@ public class Car {
      * @return true if passenger is added to car or false if cannot add passenger
      */
 
-    public boolean addPassenger(Passenger p) {
+    public Boolean addPassenger(Passenger p) {
         int cap = passengersOnboard.size();
         if (cap < maxCapacity && !passengersOnboard.contains(p)) {
             passengersOnboard.add(p);
@@ -66,7 +66,7 @@ public class Car {
      * @return true if function is able to remove passenger from car or false if not
      */
 
-    public boolean removePassenger(Passenger p) {
+    public Boolean removePassenger(Passenger p) {
         if (passengersOnboard.contains(p)) {
             passengersOnboard.remove(p);
             return true;

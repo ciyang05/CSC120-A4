@@ -23,15 +23,22 @@ public class Passenger implements PassengerRequirements {
         this.name = name;
     }
     /**
+     * prints the name of passenger in an understandable way
+     */
+    public String toString() {
+        return "Passenger: " + name;
+     }
+    /**
      * Passenger boards a train car
      * @param c specific car that passenger boards
      */
+    
     @Override
     public void boardCar(Car c) {
        if (c.addPassenger(this)){
-        System.out.println(name + "boarded the car");
+        System.out.println(name +  " " + "boarded the car");
        }  else {
-        System.out.println(name + "could not board car");
+        System.out.println(name + " " +"could not board car");
        }
     }
     /**
@@ -41,9 +48,20 @@ public class Passenger implements PassengerRequirements {
     @Override
     public void getOffCar(Car c) {
        if (c.removePassenger(this)) {
-        System.out.println(name + "got off car");
+        System.out.println(name + " "+ "got off car");
        } else {
-        System.out.println(name + "did not remove, passenger may not be in car");
+        System.out.println(name +  " " + "did not remove, passenger may not be in car");
        }
     }
+    // public static void main(String[] args) {
+    //     Passenger passenger1 = new Passenger("Kiara");
+    //     Passenger passenger2 = new Passenger("John");
+    //     System.out.println(passenger1);
+        
+    //     Car testCar = new Car(1);
+        
+    //    passenger1.boardCar(testCar);
+    //    passenger1.getOffCar(testCar);
+    //    passenger2.boardCar(testCar);
+    // }
 }

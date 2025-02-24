@@ -16,12 +16,12 @@ public class Train implements TrainRequirements{
      * @param Car
      * @param passengerCapacity
      */
-    public Train(FuelType fuelType, double currentFuelLevel, double fuelCapacity, int nCar, int passengerCapacity){
+    public Train(FuelType fuelType, double currentFuelLevel, double fuelCapacity, int nCars, int passengerCapacity){
         
         this.cars = new ArrayList<Car>();
-        for (int i = 0; i <= nCar; i++){
-            Car Car = new  Car(passengerCapacity);
-            cars.add(Car);
+        for (int i = 0; i <= nCars; i++){
+            Car car = new  Car(passengerCapacity);
+            cars.add(car);
         }
 
         this.engine = new Engine(fuelType, currentFuelLevel, fuelCapacity);
@@ -40,7 +40,10 @@ public class Train implements TrainRequirements{
 
     }
     public int getMaxCapacity(){
-        for (int i = 0){
+        int max = 0;
+        for (Car car : cars) {
+            
+        }
 
             
         }

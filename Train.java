@@ -7,7 +7,7 @@ public class Train implements TrainRequirements{
     private Engine engine;
 
     /**
-     * initilizes the objects and arraylist
+     * constructor initializes the objects and arraylist
      * @param fuelType
      * @param currentFuelLevel
      * @param fuelCapacity
@@ -17,7 +17,7 @@ public class Train implements TrainRequirements{
     public Train(FuelType fuelType, double currentFuelLevel, double fuelCapacity, int nCars, int passengerCapacity){
         
         this.cars = new ArrayList<Car>();
-        for (int i = 0; i <= nCars; i++){
+        for (int i = 0; i < nCars; i++){ // fixed the bounds of this loop by using less than, not less than/equal to 
             Car car = new  Car(passengerCapacity);
             cars.add(car);
         }

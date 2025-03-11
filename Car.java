@@ -37,7 +37,7 @@ public class Car implements CarRequirements {
      */
 
     public int seatsRemaining() {
-        return this.maxCapacity - passengersOnboard.size();
+        return this.maxCapacity - passengersOnboard.size(); // fixed how seats remaining are calculated by subtracting the size of passengers list from max capacity 
     }
 
 

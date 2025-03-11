@@ -24,6 +24,7 @@ public class Passenger implements PassengerRequirements {
     }
     /**
      * prints the name of passenger in an understandable way
+     * @return name of the passenger on board
      */
     public String toString() {
         return "Passenger: " + name;
